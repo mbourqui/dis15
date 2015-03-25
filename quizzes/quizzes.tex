@@ -1,23 +1,205 @@
-\documentclass[12pt,a4paper]{exam}
+\documentclass[12pt,a4paper]{exam} % Adds 'answers' to print solutions
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{graphicx}
+\graphicspath{ {figures/} }
 \usepackage{todonotes}
+\usepackage{hyperref}
+
 \author{Marc Bourqui}
 \title{Distributed Information Systems 2015 quizzes}
+
+\newcommand{\mat}[1]{\ensuremath{\textbf{#1}}}
+
 \begin{document}
 
+\section{An Overview}
 \todo[inline]{Overview DIS}
 
-\todo[inline]{Horizontal Fragmentation}
+\section{Semistructured Data Management}
 
-\todo[inline]{Graph Databases}
-
-\section{Vector Space Model} %Week4
-\subsection{Information Retrieval}
+\subsection{Horizontal Fragmentation}
+\subsubsection{Relational Databases}
 \begin{questions}
+%9
+\question At which phase of the database lifecycle is fragmentation performed ?
+\begin{checkboxes}
+\CorrectChoice At database design time
+\choice During distributed query processing
+\choice During updates to a distributed database
+\end{checkboxes}
+
+%10
+\question The reconstruction property expresses that
+\begin{checkboxes}
+\choice In case of a node failure the data can be recovered from a fragment from another node
+\CorrectChoice The original data can be fully recovered from the fragments
+\choice Every data value of the original data can be found in at least one fragment
+\end{checkboxes}
+
+\end{questions}
+
+\subsubsection{Primary Horizontal Fragmentation} %Week2
+
+\begin{questions}
+%16
+\question Example: application A1 accesses
+\begin{enumerate}
+\item Fragment F1: with frequency 3
+\item Fragment F2: with frequency 1
+\end{enumerate}
+A1 accesses the whole relation with frequency
+\missingfigure{graph}
+\begin{checkboxes}
+\CorrectChoice 13/7
+\choice 4/7
+\choice 14/7
+\end{checkboxes}
+
+%26
+\question Consider the access frequencies below:
+How many horizontal fragments would a minimal and complete fragmentation have?
+\missingfigure{table}
+\begin{checkboxes}
+\CorrectChoice 3
+\choice 4
+\choice 6
+\end{checkboxes}
+
+%27
+\question Which of the following sets of simple predicates is complete?
+\missingfigure{table}
+\begin{checkboxes}
+\choice {Location = ”Munich", Budget > 200000 }
+\choice {Location = ”Munich", Location = ”Bangalore”}
+\choice {Location = ”Paris", Budget <= 200000 }
+\CorrectChoice None of those
+\end{checkboxes}
+
+%33
+\question Which is true for MinFrag algorithm?
+\begin{checkboxes}
+\choice The output is independent of the order of the input
+\choice It produces a monotonically increasing set of predicates
+\CorrectChoice It always terminates
+\choice All of the above statements are true
+\end{checkboxes}
+
+
+%39
+\question When deriving a horizontal fragmentation for relation S from a horizontally fragmented relation R
+\begin{checkboxes}
+\CorrectChoice Some primary key attribute in R must be a foreign key in S
+\choice Some primary key attribute in S must be a foreign key in R
+\choice Both are required
+\end{checkboxes}
+
+\end{questions}
+
+\subsection{Graph Databases} %Week3
+\subsubsection{Semi-structured Data}
+\begin{questions}
+%14
+\question Semi-structured data
+\begin{checkboxes}
+\choice Is always schema-less
+\CorrectChoice Always embeds schema information into the data
+\choice Must always be hierarchically structured
+\choice Can never be indexed
+\end{checkboxes}
+
+%15
+\question Why is XML a document model?
+\begin{checkboxes}
+\choice It supports application-specific markup
+\choice It supports domain-specific schemas
+\CorrectChoice It has a serialized representation
+\choice It uses HTML tags
+\end{checkboxes}
+\end{questions}
+
+\subsubsection{Graph Data Model}
+\begin{questions}
+%22
+\question In a graph database
+\begin{checkboxes}
+\choice There is a unique root node
+\CorrectChoice Each node has a unique identifier
+\choice Data values in leaf nodes are unique
+\choice The labels of edges leaving a node are different
+\choice There is a unique path from the root to each leaf
+\end{checkboxes}
+
+%36
+\question The simulation relationship is a relation
+\begin{checkboxes}
+\CorrectChoice Among nodes in the data and schema graph
+\choice Among edges in the data and schema graph
+\choice Among sets of nodes in the data and schema graph
+\choice Among sets of edges in the data and schema graph
+\end{checkboxes}
+
+%37
+\question Which is true?
+\begin{checkboxes}
+\choice For each labelled edge in S a corresponding edge in D
+can be identified
+\choice For each root node in S a corresponding root node D
+can be identified
+\CorrectChoice For each leaf node in D a corresponding typed node in
+S can be identified
+\choice For each node in S a unique path reaching it from a
+root node can be identified
+\end{checkboxes}
+
+%43
+\question If there exists a uniquely defined simulation relationship among a graph database D and a schema graph S
+\begin{checkboxes}
+\choice The data and schema graph are simulation equivalent
+\CorrectChoice Ambiguous classification cannot occur
+\choice Multiple classification cannot occur
+\end{checkboxes}
+
+%48
+\question If schema graph S1 subsumes S2
+\begin{checkboxes}
+\choice Every graph database corresponding to S1 corresponds also to S2
+\CorrectChoice S2 simulates S1
+\choice S1 has fewer nodes than S2
+\end{checkboxes}
+\end{questions}
+
+\subsubsection{Schema Extraction}
+\begin{questions}
+
+%57
+\question Which is wrong? In a dataguide
+\begin{checkboxes}
+\choice Every path in the data graph occurs only once
+\CorrectChoice Every node in the data graph occurs only in one data
+guide node
+\choice Every data guide node has a unique set of nodes
+\choice A leaf node in the data graph corresponds always to a
+leaf node in the data guide
+\end{checkboxes}
+
+%63
+\question In a non-deterministic schema graph
+\begin{checkboxes}
+\CorrectChoice Every node of the data graph occurs exactly once
+\choice Every path of the data graph occurs at most once
+\choice Every label of an outgoing edge of a node in the
+schema graph is unique
+\end{checkboxes}
+\end{questions}
+
+\section{Information Retrieval and Data Mining}
+\subsection{Information Retrieval} %Week4
+\subsubsection{Information Retrieval}
+\begin{questions}
+%12
 \question A retrieval model attempts to model
 \begin{checkboxes}
 \choice The interface by which a user is accessing information
@@ -26,6 +208,7 @@
 \choice All of the above
 \end{checkboxes}
 
+%16
 \question If the top 100 documents contain 50 relevant documents
 \begin{checkboxes}
 \choice The precision of the system at 50 is 0.5
@@ -34,6 +217,7 @@
 \choice None of the above
 \end{checkboxes}
 
+%17
 \question If retrieval system A has a higher precision than
 system B
 \begin{checkboxes}
@@ -48,17 +232,164 @@ values than in B
 \end{checkboxes}
 \end{questions}
 
-\subsection{Text-based Information Retrieval}
+\subsubsection{Text-based Information Retrieval}
 \begin{questions}
+%25
 \question Full-text retrieval means that
 \begin{checkboxes}
 \choice The document text is grammatically deeply analyzed
 for indexing
 \choice The complete vocabulary of a language is used to
 extract index terms
-\choice All words of a text are considered as potential index
+\CorrectChoice All words of a text are considered as potential index
 terms
 \choice All grammatical variations of a word are indexed
 \end{checkboxes}
+
+%26
+\question The term-document matrix indicates
+\begin{checkboxes}
+\choice How many relevant terms a document contains
+\choice How relevant a term is for a given document
+\CorrectChoice How often a relevant term occurs in a document
+collection
+\CorrectChoice Which relevant terms are occurring in a document
+collection
+\end{checkboxes}
+
+%31
+\question Let the query be represented by the following vectors:
+(1, 0, -1) (0, -1, 1); the document by the vector (1, 0, 1)
+\begin{checkboxes}
+\choice Matches the query because it matches the first query vector
+\CorrectChoice Matches the query because it matches the second query vector
+\choice Does not match the query because it does not match the first
+query vector
+\choice Does not match the query because it does not match the second
+query vector
+\end{checkboxes}
+
+%38
+\question Which is right? The term frequency is normalized
+\begin{checkboxes}
+\CorrectChoice By the maximal frequency of a term in the document
+\choice By the maximal frequency of a term in the document collection
+\choice By the maximal frequency of a term in the vocabulary
+\choice By the maximal term frequency of any document in the collection
+\end{checkboxes}
+
+
+%44
+\question The inverse document frequency of a term can increase
+\begin{checkboxes}
+\choice By adding the term to a document that contains the term
+\CorrectChoice By adding a document to a document collection that does not
+contain the term
+\choice By removing a document from the document collection that
+does not contain the term
+\choice By adding a document to a document collection that contains
+the term
+\end{checkboxes}
+
 \end{questions}
+
+\subsection{Advanced Retrieval Models} % Week 5
+
+\subsubsection{Latent Semantic Indexing}
+
+\begin{questions}
+
+% 13 1
+\question In vector space retrieval each row of the matrix $M^t$ corresponds to
+\begin{checkboxes}
+\CorrectChoice A document
+\choice A concept
+\choice A query
+\choice A query result
+\end{checkboxes}
+
+% 22 2
+\question Applying SVD to a term-document matrix \mat{M}. Each concept is represented
+\begin{checkboxes}
+\choice As a singular value
+\CorrectChoice As a linear combination of terms of the vocabulary
+\choice As a linear combination of documents in the document collection
+\choice As a least square approximation of the matrix \mat{M}
+\end{checkboxes}
+
+% 23 2
+\question The number of term vectors in the SVD for LSI
+\begin{checkboxes}
+\choice Is smaller than the number of rows in the matrix \mat{M}
+\CorrectChoice Is the same as the number of rows in the matrix \mat{M}
+\choice Is larger than the number of rows in the matrix \mat{M}
+\end{checkboxes}
+
+% 32 1
+\question A query transformed into the concept space for LSI has
+\begin{checkboxes}
+\CorrectChoice $s$ components (number of singular values)
+\choice $m$ components (size of vocabulary)
+\choice $n$ components (number of documents)
+\end{checkboxes}
+\end{questions}
+
+\subsubsection{User Relevance Feedback}
+% 40 3
+\begin{questions}
+\question Can documents which do not contain any keywords of the original query receive a positive similarity coefficient after relevance feedback ?
+\begin{checkboxes}
+\choice No
+\choice Yes, independent of the values $\beta$ and $\gamma$
+\CorrectChoice Yes, but only if $\beta>0$
+\choice Yes, but only if $\gamma>0$
+\end{checkboxes}
+
+% 49 1,3
+\question A positive random jump value for exactly one node implies that
+\begin{checkboxes}
+\CorrectChoice a random walker can leave the node even without outgoing edges
+\choice a random walker
+\CorrectChoice a random walker
+\choice none of the above
+\end{checkboxes}
+
+% 56 3
+\question Given the graph below and an initial hub vector of $(1,1,1)$. The hub-authority ranking will result in the following
+\begin{checkboxes}
+\choice authority vector $(0,0,1$)~; hub vector $(1,1,0)$
+\choice authority vector $(0,0,2)$~; hub vector $(2,2,0)$
+\CorrectChoice authority vector $(0,0,1)$~; hub vector $(\frac{1}{2},\frac{1}{2},0)$
+\choice authority vector $(0,0,2)$~; hub vector $(1,1,0)$
+\end{checkboxes}
+\end{questions}
+
+\subsubsection{Link-based Ranking}
+\begin{questions}
+\question
+\begin{checkboxes}
+\end{checkboxes}
+
+%
+\question
+\begin{checkboxes}
+\end{checkboxes}
+\end{questions}
+
+\section*{Credits}
+Quiz questions were taken from the lecture notes of \href{http://people.epfl.ch/karl.aberer}{Prof. Karl Aberer}.\\
+%Cost functions figure from Patrick Breheny's slides.\\
+%Biais-variance decomposition figure from Hastie, Tibshirani, Friedman, \textit{The Elements of Statistical Learning}.
+%The SVD figure from Kevin P. Murphy, \textit{Machine Learning, A Probabilistic Perspective}.
+
+% ---------- Footer
+\hrule
+\tiny
+Rendered \today. Written by \href{http://people.epfl.ch/marc.bourqui}{Marc Bourqui}.
+\copyright Marc Bourqui. This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License.
+To view a copy of this license, visit \href{http://creativecommons.org/licenses/by-sa/3.0/}{http://creativecommons.org/licenses/by-sa/3.0/} or
+send a letter to Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
+\includegraphics{by-sa.png}
+
+Source code available on~: \href{https://git.epfl.ch/repo/dis15.git}{https://git.epfl.ch/repo/dis15.git}
 \end{document}
