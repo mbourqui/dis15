@@ -7,6 +7,7 @@
 \graphicspath{ {figures/} }
 \usepackage{todonotes}
 \usepackage{hyperref}
+\usepackage{xfrac}
 
 \author{Marc Bourqui}
 \title{Distributed Information Systems 2015 quizzes}
@@ -53,9 +54,9 @@
 A1 accesses the whole relation with frequency
 \missingfigure{graph}
 \begin{checkboxes}
-\CorrectChoice 13/7
-\choice 4/7
-\choice 14/7
+\CorrectChoice $\sfrac{13}{7}$
+\choice $\sfrac{4}{7}$
+\choice $\sfrac{14}{7}$
 \end{checkboxes}
 
 %26
@@ -72,9 +73,9 @@ How many horizontal fragments would a minimal and complete fragmentation have?
 \question Which of the following sets of simple predicates is complete?
 \missingfigure{table}
 \begin{checkboxes}
-\choice {Location = ”Munich", Budget > 200000 }
+\choice {Location = ”Munich", Budget \textgreater\ 200000 }
 \choice {Location = ”Munich", Location = ”Bangalore”}
-\choice {Location = ”Paris", Budget <= 200000 }
+\choice {Location = ”Paris", Budget $\le$ 200000 }
 \CorrectChoice None of those
 \end{checkboxes}
 
@@ -89,10 +90,10 @@ How many horizontal fragments would a minimal and complete fragmentation have?
 
 
 %39
-\question When deriving a horizontal fragmentation for relation S from a horizontally fragmented relation R
+\question When deriving a horizontal fragmentation for relation $S$ from a horizontally fragmented relation $R$
 \begin{checkboxes}
-\CorrectChoice Some primary key attribute in R must be a foreign key in S
-\choice Some primary key attribute in S must be a foreign key in R
+\CorrectChoice Some primary key attribute in $R$ must be a foreign key in $S$
+\choice Some primary key attribute in $S$ must be a foreign key in $R$
 \choice Both are required
 \end{checkboxes}
 
@@ -144,18 +145,14 @@ How many horizontal fragments would a minimal and complete fragmentation have?
 %37
 \question Which is true?
 \begin{checkboxes}
-\choice For each labelled edge in S a corresponding edge in D
-can be identified
-\choice For each root node in S a corresponding root node D
-can be identified
-\CorrectChoice For each leaf node in D a corresponding typed node in
-S can be identified
-\choice For each node in S a unique path reaching it from a
-root node can be identified
+\choice For each labelled edge in $S$ a corresponding edge in $D$ can be identified
+\choice For each root node in $S$ a corresponding root node $D$ can be identified
+\CorrectChoice For each leaf node in $D$ a corresponding typed node in $S$ can be identified
+\choice For each node in $S$ a unique path reaching it from a root node can be identified
 \end{checkboxes}
 
 %43
-\question If there exists a uniquely defined simulation relationship among a graph database D and a schema graph S
+\question If there exists a uniquely defined simulation relationship among a graph database $D$ and a schema graph $S$
 \begin{checkboxes}
 \choice The data and schema graph are simulation equivalent
 \CorrectChoice Ambiguous classification cannot occur
@@ -163,11 +160,11 @@ root node can be identified
 \end{checkboxes}
 
 %48
-\question If schema graph S1 subsumes S2
+\question If schema graph $S_1$ subsumes $S_2$
 \begin{checkboxes}
-\choice Every graph database corresponding to S1 corresponds also to S2
-\CorrectChoice S2 simulates S1
-\choice S1 has fewer nodes than S2
+\choice Every graph database corresponding to $S_1$ corresponds also to $S_2$
+\CorrectChoice $S_2$ simulates $S_1$
+\choice $S_1$ has fewer nodes than $S_2$
 \end{checkboxes}
 \end{questions}
 
@@ -178,11 +175,9 @@ root node can be identified
 \question Which is wrong? In a dataguide
 \begin{checkboxes}
 \choice Every path in the data graph occurs only once
-\CorrectChoice Every node in the data graph occurs only in one data
-guide node
+\CorrectChoice Every node in the data graph occurs only in one data guide node
 \choice Every data guide node has a unique set of nodes
-\choice A leaf node in the data graph corresponds always to a
-leaf node in the data guide
+\choice A leaf node in the data graph corresponds always to a leaf node in the data guide
 \end{checkboxes}
 
 %63
@@ -190,8 +185,7 @@ leaf node in the data guide
 \begin{checkboxes}
 \CorrectChoice Every node of the data graph occurs exactly once
 \choice Every path of the data graph occurs at most once
-\choice Every label of an outgoing edge of a node in the
-schema graph is unique
+\choice Every label of an outgoing edge of a node in the schema graph is unique
 \end{checkboxes}
 \end{questions}
 
@@ -212,23 +206,18 @@ schema graph is unique
 \question If the top 100 documents contain 50 relevant documents
 \begin{checkboxes}
 \choice The precision of the system at 50 is 0.5
-\choice The precision of the system at 100 is 0.5
+\CorrectChoice The precision of the system at 100 is 0.5
 \choice The recall of the system is 0.5
 \choice None of the above
 \end{checkboxes}
 
 %17
-\question If retrieval system A has a higher precision than
-system B
+\question If retrieval system A has a higher precision than system B
 \begin{checkboxes}
-\choice The top k documents of A will have higher similarity
-values than the top k documents of B
-\choice The top k documents of A will contain more relevant
-documents than the top k documents of B
-\choice A will recall more documents above a given similarity
-threshold than B
-\choice Relevant documents in A will have higher similarity
-values than in B
+\choice The top k documents of A will have higher similarity values than the top k documents of B
+\CorrectChoice The top k documents of A will contain more relevant documents than the top k documents of B
+\choice A will recall more documents above a given similarity threshold than B
+\choice Relevant documents in A will have higher similarity values than in B
 \end{checkboxes}
 \end{questions}
 
@@ -237,24 +226,19 @@ values than in B
 %25
 \question Full-text retrieval means that
 \begin{checkboxes}
-\choice The document text is grammatically deeply analyzed
-for indexing
-\choice The complete vocabulary of a language is used to
-extract index terms
-\CorrectChoice All words of a text are considered as potential index
-terms
+\choice The document text is grammatically deeply analyzed for indexing
+\choice The complete vocabulary of a language is used to extract index terms
+\CorrectChoice All words of a text are considered as potential index terms
 \choice All grammatical variations of a word are indexed
 \end{checkboxes}
 
 %26
 \question The term-document matrix indicates
 \begin{checkboxes}
-\choice How many relevant terms a document contains
+\CorrectChoice How many relevant terms a document contains
 \choice How relevant a term is for a given document
-\CorrectChoice How often a relevant term occurs in a document
-collection
-\CorrectChoice Which relevant terms are occurring in a document
-collection
+\CorrectChoice How often a relevant term occurs in a document collection
+\CorrectChoice Which relevant terms are occurring in a document collection
 \end{checkboxes}
 
 %31
@@ -263,10 +247,8 @@ collection
 \begin{checkboxes}
 \choice Matches the query because it matches the first query vector
 \CorrectChoice Matches the query because it matches the second query vector
-\choice Does not match the query because it does not match the first
-query vector
-\choice Does not match the query because it does not match the second
-query vector
+\choice Does not match the query because it does not match the first query vector
+\choice Does not match the query because it does not match the second query vector
 \end{checkboxes}
 
 %38
@@ -377,19 +359,16 @@ the term
 \end{questions}
 
 \section*{Credits}
-Quiz questions were taken from the lecture notes of \href{http://people.epfl.ch/karl.aberer}{Prof. Karl Aberer}.\\
-%Cost functions figure from Patrick Breheny's slides.\\
-%Biais-variance decomposition figure from Hastie, Tibshirani, Friedman, \textit{The Elements of Statistical Learning}.
-%The SVD figure from Kevin P. Murphy, \textit{Machine Learning, A Probabilistic Perspective}.
+Quiz questions were taken from the lecture notes of \href{http://people.epfl.ch/karl.aberer}{Prof. Karl Aberer}.%\\
 
-% ---------- Footer
-\hrule
-\tiny
-Rendered \today. Written by \href{http://people.epfl.ch/marc.bourqui}{Marc Bourqui}.
-\copyright Marc Bourqui. This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License.
-To view a copy of this license, visit \href{http://creativecommons.org/licenses/by-sa/3.0/}{http://creativecommons.org/licenses/by-sa/3.0/} or
-send a letter to Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
-\includegraphics{by-sa.png}
-
-Source code available on~: \href{https://git.epfl.ch/repo/dis15.git}{https://git.epfl.ch/repo/dis15.git}
+%% ---------- Footer
+%\hrule
+%\tiny
+%Rendered \today. Written by \href{http://people.epfl.ch/marc.bourqui}{Marc Bourqui}.
+%\copyright Marc Bourqui. This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License.
+%To view a copy of this license, visit \href{http://creativecommons.org/licenses/by-sa/3.0/}{http://creativecommons.org/licenses/by-sa/3.0/} or
+%send a letter to Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
+%\includegraphics{by-sa.png}
+%
+%Source code available on~: \href{https://git.epfl.ch/repo/dis15.git}{https://git.epfl.ch/repo/dis15.git}
 \end{document}
