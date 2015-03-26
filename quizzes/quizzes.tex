@@ -16,7 +16,7 @@
 
 \begin{document}
 
-\section{An Overview}
+\section{An Overview (week 1)}
 \todo[inline]{Overview DIS}
 
 \section{Semistructured Data Management}
@@ -24,6 +24,7 @@
 \subsection{Horizontal Fragmentation}
 \subsubsection{Relational Databases}
 \begin{questions}
+
 %9
 \question At which phase of the database lifecycle is fragmentation performed ?
 \begin{checkboxes}
@@ -39,10 +40,10 @@
 \CorrectChoice The original data can be fully recovered from the fragments
 \choice Every data value of the original data can be found in at least one fragment
 \end{checkboxes}
-
 \end{questions}
 
-\subsubsection{Primary Horizontal Fragmentation} %Week2
+
+\subsubsection{Primary Horizontal Fragmentation (week 2)} %Week2
 
 \begin{questions}
 %16
@@ -99,7 +100,7 @@ How many horizontal fragments would a minimal and complete fragmentation have?
 
 \end{questions}
 
-\subsection{Graph Databases} %Week3
+\subsection{Graph Databases (week 3)} %Week3
 \subsubsection{Semi-structured Data}
 \begin{questions}
 %14
@@ -190,7 +191,7 @@ How many horizontal fragments would a minimal and complete fragmentation have?
 \end{questions}
 
 \section{Information Retrieval and Data Mining}
-\subsection{Information Retrieval} %Week4
+\subsection{Information Retrieval (week 4)} %Week4
 \subsubsection{Information Retrieval}
 \begin{questions}
 %12
@@ -275,7 +276,7 @@ the term
 
 \end{questions}
 
-\subsection{Advanced Retrieval Models} % Week 5
+\subsection{Advanced Retrieval Models (week 5)} % Week 5
 
 \subsubsection{Latent Semantic Indexing}
 
@@ -327,17 +328,20 @@ the term
 \choice Yes, but only if $\gamma>0$
 \end{checkboxes}
 
+
+\subsubsection{Link-based Ranking}
 % 49 1,3
 \question A positive random jump value for exactly one node implies that
 \begin{checkboxes}
 \CorrectChoice a random walker can leave the node even without outgoing edges
-\choice a random walker
-\CorrectChoice a random walker
+\choice a random walker can reach the node multiple times even without outgoing edges
+\CorrectChoice a random walker can reach the node even without incoming edges
 \choice none of the above
 \end{checkboxes}
 
 % 56 3
 \question Given the graph below and an initial hub vector of $(1,1,1)$. The hub-authority ranking will result in the following
+\missingfigure{graph}
 \begin{checkboxes}
 \choice authority vector $(0,0,1$)~; hub vector $(1,1,0)$
 \choice authority vector $(0,0,2)$~; hub vector $(2,2,0)$
@@ -346,15 +350,66 @@ the term
 \end{checkboxes}
 \end{questions}
 
-\subsubsection{Link-based Ranking}
+
+\subsubsection{Inverted Files (week 6)}
+% 10 3
 \begin{questions}
-\question
+\question A posting indicates
 \begin{checkboxes}
+\choice The frequency of a term in the vocabulary
+\choice The frequency of a term in a document
+\CorrectChoice The occurrence of a term in a document
+\choice The list of terms occurring in a document
 \end{checkboxes}
 
-%
-\question
+% 11 4
+\question When indexing a document collection using an inverted file, the main space requirement is implied by
 \begin{checkboxes}
+\choice The access structure
+\choice The vocabulary
+\choice The index file
+\CorrectChoice The postings file
+\end{checkboxes}
+
+% 18 4
+\question Using a trie in index construction
+\begin{checkboxes}
+\choice Helps to quickly find words that have been seen before
+\choice Helps to quickly decide whether a word has not seen before
+\choice Helps to maintain the lexicographic order of words seen in the documents
+\CorrectChoice All of the above
+\end{checkboxes}
+
+% 25 1
+\question Maintaining the order of document identifiers when partitioning the document collection is important
+\begin{checkboxes}
+\CorrectChoice In the index merging approach for single node machines
+\choice In the map-reduce approach for parallel clusters
+\choice In both
+\choice In neither of the two
+\end{checkboxes}
+
+\end{questions}
+
+\subsubsection{Distributed Retrieval}
+\begin{questions}
+
+% 36 2
+\question When applying Fagin’s algorithm for a query with three different terms for finding the $k$ top documents, the algorithm will scan
+\begin{checkboxes}
+\choice 2 different lists
+\CorrectChoice 3 different lists
+\choice $k$ different lists
+\choice it depends how many rounds are taken
+\end{checkboxes}
+
+% 37 2
+\question Once $k$ documents have been identified that occur in all of the lists
+\begin{checkboxes}
+\choice These are the top-$k$ documents
+\CorrectChoice The top-$k$ documents are among the documents seen so far
+\choice The search has to continue in round-robin till the top-$k$ documents are identified
+\choice Other documents have to be searched to complete the top-$k$ list
 \end{checkboxes}
 \end{questions}
 
