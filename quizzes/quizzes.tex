@@ -9,19 +9,157 @@
 \usepackage{hyperref}
 \usepackage{xfrac}
 
-\author{Marc Bourqui}
+%\author{Marc Bourqui}
 \title{Distributed Information Systems 2015 quizzes}
 
 \newcommand{\mat}[1]{\ensuremath{\textbf{#1}}}
 
 \begin{document}
+\maketitle
 
+\part{Introduction}
+% -------------------------------------------------------------------------------------------------
 \section{An Overview (week 1)}
-\todo[inline]{Overview DIS}
+\subsection{Information Systems}
+\begin{questions}
 
-\section{Semistructured Data Management}
+% 13
+\question Functions in models
+\begin{checkboxes}
+\choice Are always computable
+\choice Can always be represented as data
+\choice Can be constrained by axioms
+\end{checkboxes}
 
-\subsection{Horizontal Fragmentation}
+% 13
+\question Interpretation relationships
+\begin{checkboxes}
+\choice Are always computable
+\choice Relate constants to real-world entities
+\choice Are uniquely defined
+\end{checkboxes}
+\end{questions}
+
+\subsection{Data Management}
+\begin{questions}
+
+% 27
+\question What is not specified in the data definition language~?
+\begin{checkboxes}
+\choice The structure of a relational table
+\choice The query of user
+\choice A constraint on a relational table
+\end{checkboxes}
+
+% 28
+\question Logical data independence means
+\begin{checkboxes}
+\choice An abstract data type is implemented using different data structures
+\choice A new view is computed without changing an existing database schema
+\choice A model can be represented in different data modelling formalisms
+\end{checkboxes}
+\end{questions}
+
+\subsection{Data Management Tasks}
+\begin{questions}
+
+% 39
+\question Which is wrong~? An index structure
+\begin{checkboxes}
+\choice Is created as part of physical database design
+\choice Is selected during query optimization
+\choice Accelerates search queries
+\choice Accelerates tuple insertion
+\end{checkboxes}
+
+% 40
+\question Persistence means that
+\begin{checkboxes}
+\choice A change of a transaction on a database is never lost after it is completed
+\choice The state of a database is independent of the lifetime of a program
+\choice The same logical database can be stored in different ways on a storage medium
+\end{checkboxes}
+\end{questions}
+
+\subsection{Information Management}
+\begin{questions}
+
+% 49
+\question Grouping Twitter users according to their interest by analyzing the content of their tweets is
+\begin{checkboxes}
+\choice A retrieval task
+\choice A data mining task
+\choice An evaluation task
+\choice A monitoring task
+\end{checkboxes}
+\end{questions}
+
+\subsection{Distributed Information Systems}
+\begin{questions}
+
+% 55
+\question Creating a web portal for comparing product prices is (primarily) a problem of
+\begin{checkboxes}
+\choice Distributed data management
+\choice Heterogeneous data integration
+\choice Collaboration among autonomous systems
+\end{checkboxes}
+\end{questions}
+
+\subsection{Distributed Data Management}
+\begin{questions}
+
+% 68
+\question When you open a Web page with an embedded Twitter stream, the communication model used by Twitter is
+\begin{checkboxes}
+\choice Push, unicast and conditional
+\choice Pull, multicast and ad-hoc
+\choice Push, multicast and ad-hoc
+\choice Pull, unicast and conditional
+\end{checkboxes}
+\end{questions}
+
+\subsection{Heterogeneity}
+\begin{questions}
+
+% 79
+\question Creating a web portal for comparing product prices requires to address
+\begin{checkboxes}
+\choice Syntactic heterogeneity
+\choice Semantic heterogeneity
+\choice Both
+\end{checkboxes}
+
+% 80
+\question An ontology is a
+\begin{checkboxes}
+\choice Sdatabase
+\choice database schema
+\choice data model
+\choice data modeling formalism
+\choice model
+\end{checkboxes}
+\end{questions}
+
+\subsection{Autonomy}
+\begin{questions}
+
+% 89
+\question Trust is
+\begin{checkboxes}
+\choice A quality of information
+\choice A quality of a user
+\choice A quality of the relationship among user and information
+\choice A quality of the relationship among users
+\end{checkboxes}
+\end{questions}
+
+
+\part{Storage}
+% -------------------------------------------------------------------------------------------------
+\section{Distributed Data Management}
+
+\subsection{Schema Fragmentation}
 \subsubsection{Relational Databases}
 \begin{questions}
 
@@ -190,6 +328,9 @@ How many horizontal fragments would a minimal and complete fragmentation have?
 \end{checkboxes}
 \end{questions}
 
+
+\part{Search}
+% -------------------------------------------------------------------------------------------------
 \section{Information Retrieval and Data Mining}
 \subsection{Information Retrieval (week 4)} %Week4
 \subsubsection{Information Retrieval}
@@ -413,6 +554,9 @@ the term
 \end{checkboxes}
 \end{questions}
 
+
+
+% -------------------------------------------------------------------------------------------------
 \section*{Credits}
 Quiz questions were taken from the lecture notes of \href{http://people.epfl.ch/karl.aberer}{Prof. Karl Aberer}.%\\
 
