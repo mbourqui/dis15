@@ -1,7 +1,7 @@
 \documentclass[12pt,a4paper,answers]{exam} % Adds 'answers' to print solutions, 'cancelspace' to avoid blank space when solutions provided but 'answers' not set.
 \usepackage[utf8]{inputenc}
 \usepackage{multicol}
-\usepackage[left=1cm,right=1cm,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage[left=1cm,right=1cm,top=1.5cm,bottom=1.8cm]{geometry}
 \usepackage{amsmath,amsthm,amsfonts,amssymb,mathtools}
 \usepackage{color,graphicx}
 \graphicspath{ {figures/} }
@@ -15,7 +15,7 @@
 \newcommand{\school}{IC}
 \newcommand{\courseId}{CS-423}
 \newcommand{\courseTitle}{Distributed information systems}
-\newcommand{\courseurl}{http://isa.epfl.ch/imoniteur_ISAP/!GEDPUBLICREPORTS.pdf?ww_i_reportModel=1696552884&ww_i_reportModelXsl=1696552963&ww_i_itemplan=1799090851&ww_c_langue=en}
+\newcommand{\courseUrl}{http://isa.epfl.ch/imoniteur_ISAP/!GEDPUBLICREPORTS.pdf?ww_i_reportModel=1696552884&ww_i_reportModelXsl=1696552963&ww_i_itemplan=1799090851&ww_c_langue=en}
 \newcommand{\staff}{\href{http://people.epfl.ch//karl.aberer}{Prof. K. Aberer}}
 \newcommand{\academicYear}{2014-2015}
 \newcommand{\academicSemester}{Spring}
@@ -38,7 +38,7 @@
 
 \pagestyle{headandfoot}
 \runningheader{}
-{\includegraphics[width=0.6cm]{epfl.png}\ \epfl\ - \school\ - \href{\courseurl}{\courseId\ \textbf{\courseTitle}}\ \by\ \textit{\staff}\ - \academicSemester\ \academicYear}
+{\includegraphics[width=0.6cm]{epfl.png}\ \epfl\ - \school\ - \href{\courseUrl}{\courseId\ \textbf{\courseTitle}}\ \by\ \textit{\staff}\ - \academicSemester\ \academicYear}
 {}
 \runningheadrule
 \runningfootrule
@@ -46,9 +46,9 @@
 
 \begin{document}
 \maketitle
-\setlength{\headsep}{0.3cm}
-\begin{flushleft}
+%\setlength{\headsep}{-1cm}
 
+\begin{flushleft}
 \raggedright
 \footnotesize
 \sffamily
@@ -646,21 +646,21 @@ the term
 \begin{checkboxes}
 \choice A Powerlaw distribution
 \choice A Zipf distribution
-\choice None of the two
+\CorrectChoice None of the two
 \end{checkboxes}
 
 % 32 2
 \question Assume that in a country the size of cities follows a powerlaw distribution with exponent 2. A city of 16 Mio inhabitants has probability of $\sfrac{1}{256}$ to occur. Then a city of 8 Mio inhabitants is
 \begin{checkboxes}
 \choice Twice as probable
-\choice Four times as probable
+\CorrectChoice Four times as probable
 \choice Eight times as probable
 \end{checkboxes}
 
 % 42 1
 \question Expanding ring search is particularly suitable to locate
 \begin{checkboxes}
-\choice Frequent items
+\CorrectChoice Frequent items
 \choice Rare items
 \choice Does not matter
 \end{checkboxes}
@@ -669,7 +669,7 @@ the term
 \question With the square root rule for replica allocation~: given two items that are accessed with probabilities $p_1 > p_2$ that are replicated $r_1$ and $r_2$ times. Which is always true~?
 \begin{checkboxes}
 \choice $r_1 < r_2$
-\choice $\sfrac{r1}{p1} < \sfrac{r2}{p2}$
+\CorrectChoice $\sfrac{r1}{p1} < \sfrac{r2}{p2}$
 \choice $r_1 - p_1 < r_2 – p_2$
 \end{checkboxes}
 
@@ -680,9 +680,13 @@ the term
 
 
 \end{questions}
+\end{multicols*}
+\end{flushleft}
 % -------------------------------------------------------------------------------------------------
+
+
 \section*{Credits}
-Quiz questions were taken from the lecture notes of \href{http://people.epfl.ch/karl.aberer}{Prof. Karl Aberer}.%\\
+Quiz questions were taken from the lecture notes of \staff. Answers are provided with no guarantee.%\\
 
 %% ---------- Footer
 %\hrule
@@ -695,6 +699,4 @@ Quiz questions were taken from the lecture notes of \href{http://people.epfl.ch/
 %
 %Source code available on~: \href{https://git.epfl.ch/repo/dis15.git}{https://git.epfl.ch/repo/dis15.git}
 
-\end{multicols*}
-\end{flushleft}
 \end{document}
