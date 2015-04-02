@@ -1,21 +1,60 @@
-\documentclass[12pt,a4paper]{exam} % Adds 'answers' to print solutions
+\documentclass[12pt,a4paper]{exam} % Adds 'answers' to print solutions, 'cancelspace' to avoid blank space when solutions provided but 'answers' not set.
 \usepackage[utf8]{inputenc}
-\usepackage{amsmath}
-\usepackage{amsfonts}
-\usepackage{amssymb}
-\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage[left=0.3cm,right=0.3cm,top=1.5cm,bottom=0.8cm]{geometry}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,mathtools}
+\usepackage{color,graphicx}
 \graphicspath{ {figures/} }
 \usepackage{todonotes}
-\usepackage{hyperref}
 \usepackage{xfrac}
+\usepackage{hyperref}
+
+% Cheatsheet style
+%\input{style.tex}
+
+\newcommand{\school}{IC}
+\newcommand{\courseId}{CS-433}
+\newcommand{\courseTitle}{\href{https://isa.epfl.ch/imoniteur_ISAP/!GEDREPORTS.pdf?ww_i_reportModel=1696552884&ww_c_reportModelXsl=PDF&ww_x_ITEMPLAN=1686298920&ww_c_langue=en}{Pattern classification and machine learning}}
+\newcommand{\staff}{\href{people.epfl.ch/emtiyaz.khan}{M. E. Khan}}
+\newcommand{\academicYear}{2014-2015}
+\newcommand{\academicSemester}{Autumn}
+\newcommand{\lastUpdate}{\today}
+\newcommand{\version}{1.1.1}
 
 %\author{Marc Bourqui}
 \title{Distributed Information Systems 2015 quizzes}
 
+\pdfinfo{
+  /Title (Machine Learning Cheat Sheet)
+  /Creator (TeX)
+  /Producer (pdfTeX 1.40.0)
+  /Author (Dennis Meier)
+  /Subject (Machine Learning cheatsheet)
+  /Keywords (machinelearning, ml, bayes, regression, classification)
+}
+
 \newcommand{\mat}[1]{\ensuremath{\textbf{#1}}}
 
 \begin{document}
-\maketitle
+%\maketitle
+\setlength{\headsep}{0.3cm}
+\begin{flushleft}
+
+\title{Machine Learning Cheat Sheet}
+
+\raggedright
+\footnotesize
+\sffamily
+
+\begin{multicols*}{2}
+
+% multicol parameters
+% These lengths are set only within the two main columns
+%\setlength{\columnseprule}{0.25pt}
+\setlength{\premulticols}{1pt}
+\setlength{\postmulticols}{1pt}
+\setlength{\multicolsep}{1pt}
+\setlength{\columnsep}{2pt}
 
 \part{Introduction}
 % -------------------------------------------------------------------------------------------------
@@ -570,4 +609,7 @@ Quiz questions were taken from the lecture notes of \href{http://people.epfl.ch/
 %\includegraphics{by-sa.png}
 %
 %Source code available on~: \href{https://git.epfl.ch/repo/dis15.git}{https://git.epfl.ch/repo/dis15.git}
+
+\end{multicols*}
+\end{flushleft}
 \end{document}
