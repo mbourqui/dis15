@@ -14,9 +14,6 @@
     {\geometry{top=1.5cm,left=0.3cm,right=0.3cm,bottom=0.8cm} }
   }
 
-% Turn off header and footer
-%\pagestyle{empty}
-
 % Redefine section commands to use less space
 \makeatletter
 \renewcommand{\section}{\@startsection{section}{1}{0mm}%
@@ -83,22 +80,6 @@
 % Enable arg min/max math operators
 \DeclareMathOperator*{\argmin}{arg\,min}
 \DeclareMathOperator*{\argmax}{arg\,max}
-
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-
-%
-% Header and Footer
-%
-\fancyhead[L]{}
-\fancyhead[C]{\includegraphics[width=0.6cm]{images/epfl.png}\ \epfl\ - \school\ - \courseId\ \textbf{\courseTitle}\ \by\ \textit{\staff}\ - \academicSemester\ \academicYear}
-%\fancyhead[RO,LE]{\slshape \leftmark}
-\fancyhead[R]{}
-\renewcommand{\headrulewidth}{0.4pt}
-\renewcommand{\footrulewidth}{0.4pt}
-\fancyfoot[L]{\author}% \slshape \rightmark}
-\fancyfoot[C]{\thepage}
-\fancyfoot[R]{Version \version\ \of\ \lastUpdate}
 
 \newcommand{\by}{by}
 \newcommand{\of}{of}
