@@ -44,6 +44,11 @@
 \runningfootrule
 \runningfooter{}{\thepage}{Version \version\ \of\ \lastUpdate}
 
+% Change the default list settings
+\renewcommand{\checkboxeshook}{%
+\setlength{\leftmargin}{0.5cm}%
+}
+
 \begin{document}
 \maketitle
 %\setlength{\headsep}{-1cm}
@@ -84,10 +89,9 @@
 \choice Relate constants to real-world entities
 \choice Are uniquely defined
 \end{checkboxes}
-%\end{questions}
+
 
 \subsection{Data Management}
-%\begin{questions}
 
 % 27
 \question What is not specified in the data definition language~?
@@ -104,10 +108,9 @@
 \choice A new view is computed without changing an existing database schema
 \choice A model can be represented in different data modelling formalisms
 \end{checkboxes}
-%\end{questions}
+
 
 \subsection{Data Management Tasks}
-%\begin{questions}
 
 % 39
 \question Which is wrong~? An index structure
@@ -125,10 +128,9 @@
 \choice The state of a database is independent of the lifetime of a program
 \choice The same logical database can be stored in different ways on a storage medium
 \end{checkboxes}
-%\end{questions}
+
 
 \subsection{Information Management}
-%\begin{questions}
 
 % 49
 \question Grouping Twitter users according to their interest by analyzing the content of their tweets is
@@ -138,10 +140,9 @@
 \choice An evaluation task
 \choice A monitoring task
 \end{checkboxes}
-%\end{questions}
+
 
 \subsection{Distributed Information Systems}
-%\begin{questions}
 
 % 55
 \question Creating a web portal for comparing product prices is (primarily) a problem of
@@ -150,10 +151,9 @@
 \choice Heterogeneous data integration
 \choice Collaboration among autonomous systems
 \end{checkboxes}
-%\end{questions}
+
 
 \subsection{Distributed Data Management}
-%\begin{questions}
 
 % 68
 \question When you open a Web page with an embedded Twitter stream, the communication model used by Twitter is
@@ -163,10 +163,9 @@
 \choice Push, multicast and ad-hoc
 \choice Pull, unicast and conditional
 \end{checkboxes}
-%\end{questions}
+
 
 \subsection{Heterogeneity}
-%\begin{questions}
 
 % 79
 \question Creating a web portal for comparing product prices requires to address
@@ -185,10 +184,9 @@
 \choice data modeling formalism
 \choice model
 \end{checkboxes}
-%\end{questions}
+
 
 \subsection{Autonomy}
-%\begin{questions}
 
 % 89
 \question Trust is
@@ -198,7 +196,7 @@
 \choice A quality of the relationship among user and information
 \choice A quality of the relationship among users
 \end{checkboxes}
-%\end{questions}
+
 
 
 \part{Storage}
@@ -207,7 +205,6 @@
 
 \subsection{Schema Fragmentation}
 \subsubsection{Relational Databases}
-%\begin{questions}
 
 %9
 \question At which phase of the database lifecycle is fragmentation performed ?
@@ -224,12 +221,11 @@
 \CorrectChoice The original data can be fully recovered from the fragments
 \choice Every data value of the original data can be found in at least one fragment
 \end{checkboxes}
-%\end{questions}
+
 
 
 \subsubsection{Primary Horizontal Fragmentation (week 2)} %Week2
 
-%\begin{questions}
 %16
 \question Example: application A1 accesses
 \begin{enumerate}
@@ -282,11 +278,11 @@ How many horizontal fragments would a minimal and complete fragmentation have?
 \choice Both are required
 \end{checkboxes}
 
-%\end{questions}
+
 
 \subsection{Graph Databases (week 3)} %Week3
 \subsubsection{Semi-structured Data}
-%\begin{questions}
+
 %14
 \question Semi-structured data
 \begin{checkboxes}
@@ -304,10 +300,10 @@ How many horizontal fragments would a minimal and complete fragmentation have?
 \CorrectChoice It has a serialized representation
 \choice It uses HTML tags
 \end{checkboxes}
-%\end{questions}
+
 
 \subsubsection{Graph Data Model}
-%\begin{questions}
+
 %22
 \question In a graph database
 \begin{checkboxes}
@@ -351,10 +347,9 @@ How many horizontal fragments would a minimal and complete fragmentation have?
 \CorrectChoice $S_2$ simulates $S_1$
 \choice $S_1$ has fewer nodes than $S_2$
 \end{checkboxes}
-%\end{questions}
+
 
 \subsubsection{Schema Extraction}
-%\begin{questions}
 
 %57
 \question Which is wrong? In a dataguide
@@ -372,7 +367,7 @@ How many horizontal fragments would a minimal and complete fragmentation have?
 \choice Every path of the data graph occurs at most once
 \choice Every label of an outgoing edge of a node in the schema graph is unique
 \end{checkboxes}
-%\end{questions}
+
 
 
 \part{Search}
@@ -380,7 +375,7 @@ How many horizontal fragments would a minimal and complete fragmentation have?
 \section{Information Retrieval and Data Mining}
 \subsection{Information Retrieval (week 4)} %Week4
 \subsubsection{Information Retrieval}
-%\begin{questions}
+
 %12
 \question A retrieval model attempts to model
 \begin{checkboxes}
@@ -407,10 +402,10 @@ How many horizontal fragments would a minimal and complete fragmentation have?
 \choice A will recall more documents above a given similarity threshold than B
 \choice Relevant documents in A will have higher similarity values than in B
 \end{checkboxes}
-%\end{questions}
+
 
 \subsubsection{Text-based Information Retrieval}
-%\begin{questions}
+
 %25
 \question Full-text retrieval means that
 \begin{checkboxes}
@@ -461,13 +456,12 @@ does not contain the term
 the term
 \end{checkboxes}
 
-%\end{questions}
+
 
 \subsection{Advanced Retrieval Models (week 5)} % Week 5
 
 \subsubsection{Latent Semantic Indexing}
 
-%\begin{questions}
 
 % 13 1
 \question In vector space retrieval each row of the matrix $M^T$ corresponds to
@@ -502,11 +496,11 @@ the term
 \choice $m$ components (size of vocabulary)
 \choice $n$ components (number of documents)
 \end{checkboxes}
-%\end{questions}
+
 
 \subsubsection{User Relevance Feedback}
+
 % 40 3
-%\begin{questions}
 \question Can documents which do not contain any keywords of the original query receive a positive similarity coefficient after relevance feedback ?
 \begin{checkboxes}
 \choice No
@@ -517,6 +511,7 @@ the term
 
 
 \subsubsection{Link-based Ranking}
+
 % 49 1,3
 \question A positive random jump value for exactly one node implies that
 \begin{checkboxes}
@@ -535,12 +530,11 @@ the term
 \CorrectChoice authority vector $(0,0,1)$~; hub vector $(\frac{1}{2},\frac{1}{2},0)$
 \choice authority vector $(0,0,2)$~; hub vector $(1,1,0)$
 \end{checkboxes}
-%\end{questions}
 
 
 \subsubsection{Inverted Files (week 6)}
+
 % 10 3
-%\begin{questions}
 \question A posting indicates
 \begin{checkboxes}
 \choice The frequency of a term in the vocabulary
@@ -576,10 +570,8 @@ the term
 \choice In neither of the two
 \end{checkboxes}
 
-%\end{questions}
 
 \subsubsection{Distributed Retrieval}
-%\begin{questions}
 
 % 36 2
 \question When applying Fagin’s algorithm for a query with three different terms for finding the $k$ top documents, the algorithm will scan
@@ -598,12 +590,12 @@ the term
 \choice The search has to continue in round-robin till the top-$k$ documents are identified
 \choice Other documents have to be searched to complete the top-$k$ list
 \end{checkboxes}
-%\end{questions}
+
 
 \section{Peer-2-Peer Search}
 \subsection{Peer-2-Peer Systems}
 \subsubsection{P2P Systems and Resource Location}
-%\begin{questions}
+
 % 11 2
 \question Which resource is in Napster not shared in a P2P approach~?
 \begin{checkboxes}
@@ -629,10 +621,10 @@ the term
 \choice Efficient exchange of large files
 \choice Efficient messaging in centralized social network
 \end{checkboxes}
-%\end{questions}
+
 
 \subsubsection{Unstructured P2P Overlay Networks}
-%\begin{questions}
+
 % 26 2
 \question In an unstructured overlay network (such as Gnutella) a peer receiving a "peer discovery" message (ping)
 \begin{checkboxes}
@@ -676,7 +668,6 @@ the term
 
 \subsubsection{Hierarchical P2P Overlay Networks}
 % no question
-
 
 
 \end{questions}
