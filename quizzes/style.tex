@@ -67,15 +67,20 @@
 % Remove `itemize` indentation
 \usepackage{enumitem}
 \setlist[itemize]{leftmargin=*}
-\setitemize{noitemsep,topsep=0pt,parsep=0pt,partopsep=0p}
+\setitemize{noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt}
 
 % Set hyperlink style
 \hypersetup{hidelinks}
 
 % Enable figures
 \newenvironment{colfig}
-  {\par\medskip\noindent\minipage{\linewidth}}
+  {\par\medskip\noindent\minipage{\columnwidth}\centering}
   {\endminipage\par\medskip}
+  
+% Enable tables
+\newenvironment{coltab}
+  {\par\bigskip\noindent\minipage{\columnwidth}\centering}
+  {\endminipage\par\bigskip}
 
 % Enable arg min/max math operators
 \DeclareMathOperator*{\argmin}{arg\,min}

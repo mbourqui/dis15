@@ -8,6 +8,7 @@
 \usepackage{todonotes}
 \usepackage{xfrac}
 \usepackage{hyperref}
+\usepackage{subfig}
 
 % Style
 \input{style.tex}
@@ -71,8 +72,8 @@
 \begin{questions}
 \part{Introduction}
 % -------------------------------------------------------------------------------------------------
-\section{An Overview (week 1)}
-\subsection{Information Systems}
+\section{An Overview}
+\subsection{Information Systems (week 1)}
 
 % 13
 \question Functions in models
@@ -280,8 +281,8 @@ How many horizontal fragments would a minimal and complete fragmentation have?
 
 
 
-\subsection{Graph Databases (week 3)} %Week3
-\subsubsection{Semi-structured Data}
+\subsection{Graph Databases} %Week3
+\subsubsection{Semi-structured Data (week 3)}
 
 %14
 \question Semi-structured data
@@ -373,8 +374,8 @@ How many horizontal fragments would a minimal and complete fragmentation have?
 \part{Search}
 % -------------------------------------------------------------------------------------------------
 \section{Information Retrieval and Data Mining}
-\subsection{Information Retrieval (week 4)} %Week4
-\subsubsection{Information Retrieval}
+\subsection{Information Retrieval} %Week4
+\subsubsection{Information Retrieval (week 4)}
 
 %12
 \question A retrieval model attempts to model
@@ -458,13 +459,13 @@ the term
 
 
 
-\subsection{Advanced Retrieval Models (week 5)} % Week 5
+\subsection{Advanced Retrieval Models} % Week 5
 
-\subsubsection{Latent Semantic Indexing}
+\subsubsection{Latent Semantic Indexing (week 5)}
 
 
 % 13 1
-\question In vector space retrieval each row of the matrix $M^T$ corresponds to
+\question In vector space retrieval each row of the matrix $\mat{M}^T$ corresponds to
 \begin{checkboxes}
 \CorrectChoice A document
 \choice A concept
@@ -523,7 +524,9 @@ the term
 
 % 56 3
 \question Given the graph below and an initial hub vector of $(1,1,1)$. The hub-authority ranking will result in the following
-\missingfigure{graph}
+\begin{colfig}
+\includegraphics[scale=0.3]{w5_s56}
+\end{colfig}
 \begin{checkboxes}
 \choice authority vector $(0,0,1$)~; hub vector $(1,1,0)$
 \choice authority vector $(0,0,2)$~; hub vector $(2,2,0)$
@@ -556,7 +559,7 @@ the term
 \question Using a trie in index construction
 \begin{checkboxes}
 \choice Helps to quickly find words that have been seen before
-\choice Helps to quickly decide whether a word has not seen before
+\choice Helps to quickly decide whether a word has not been seen before
 \choice Helps to maintain the lexicographic order of words seen in the documents
 \CorrectChoice All of the above
 \end{checkboxes}
@@ -594,7 +597,7 @@ the term
 
 \section{Peer-2-Peer Search}
 \subsection{Peer-2-Peer Systems}
-\subsubsection{P2P Systems and Resource Location}
+\subsubsection{P2P Systems and Resource Location (week 7)}
 
 % 11 2
 \question Which resource is in Napster not shared in a P2P approach~?
@@ -666,8 +669,128 @@ the term
 \end{checkboxes}
 
 
-\subsubsection{Hierarchical P2P Overlay Networks}
+%\subsubsection{Hierarchical P2P Overlay Networks}
 % no question
+
+\subsubsection{Hierarchical P2P Overlay Networks (week 8)}
+
+% 14 1
+\question The index information in a structured overlay network
+\begin{checkboxes}
+\CorrectChoice Provides references to route a search request within the overlay network
+\choice Provides for a given key the reference to the peer that stores the resource
+\choice Is replicated in routing tables to support redundant search paths
+\end{checkboxes}
+
+% 14 1
+\question For the given routing table, the search request for the key 0101 is routed
+\begin{colfig}
+\centering
+\includegraphics[scale=0.75]{w8_s14}
+\end{colfig}
+
+\begin{checkboxes}
+\CorrectChoice Always to peer P5
+\choice Either to peer P5 or P6
+\choice Either to peer P3, P4, P5 or P6
+\end{checkboxes}
+
+% 22 1
+\question When routing in Chord
+\begin{checkboxes}
+\CorrectChoice The next hop is always uniquely determined
+\choice The next hop can be chosen among a constant number of possible candidates
+\choice The next hop can be chosen among log n possible candidates
+\end{checkboxes}
+
+% 23 4
+\question When adding $q$ to the Chord ring~: in the routing table of $p$
+\begin{colfig}
+\begin{minipage}[b]{0.45\linewidth}
+\centering
+\begin{tabular}{c|c}
+\hline
+$i$ & $s_i$\\
+\hline
+\hline
+1 & $p_2$\\
+2 & $p_2$\\
+3 & $p_2$\\
+4 & $p_3$\\
+5 & $p_4$\\
+\hline
+\end{tabular}
+\end{minipage}
+\begin{minipage}[b]{0.45\linewidth}
+\centering
+\includegraphics[width=\textwidth]{w8_s23}
+\end{minipage}
+\end{colfig}
+\begin{checkboxes}
+\choice Entries for $i=1,2,3,4$ change
+\choice The entry for $i=4$ changes
+\choice The entry for $i=5$ changes
+\CorrectChoice No entry changes
+\end{checkboxes}
+
+% 31 1
+\question When adding n peers to CAN the number of new zones
+\begin{checkboxes}
+\CorrectChoice Is exactly n
+\choice It depends what the keys of the peers were
+\choice It depends on the dimensionality of the key space
+\end{checkboxes}
+
+% 32 3
+\question In CAN, for a fixed dimensionality $d>2$, when moving from 1 to 2 realities
+\begin{checkboxes}
+\choice  The number of entries in the routing table increases by 2
+\choice The number of entries in the routing table increases by d
+\CorrectChoice The number of entries in the routing table doubles
+\end{checkboxes}
+
+% 41
+\question In FreeNet the routing table is updated
+\begin{checkboxes}
+\choice When a search request message arrives
+\choice When a query answer message arrives
+\choice When an insert file message arrives
+\end{checkboxes}
+
+% 42 1
+\question For which of the following structured overlay networks the length of a search path is always guaranteed to be shorter than the length of the longest key
+\begin{checkboxes}
+\CorrectChoice P-Grid
+\choice CAN
+\choice FreeNet
+\end{checkboxes}
+% Based on the path of the key itself
+
+% 52 2
+\question The local clustering coefficient is the probability that two of my friends are also friends. If I have 10 friends and among them 15 friendships exist, my local clustering coefficient is
+\begin{checkboxes}
+\choice 1/6
+\CorrectChoice 1/3
+\choice 2/3
+\choice 3/2
+\end{checkboxes}
+
+% 53
+\question A random graph has
+\begin{checkboxes}
+\choice High clustering and low diameter
+\choice High clustering and high diameter
+\choice Low clustering and low diameter
+\choice Low clustering and high diameter
+\end{checkboxes}
+
+% 66 1
+\question In a three-dimensional Kleinberg small world network with log n long range links the search cost is
+\begin{checkboxes}
+\CorrectChoice $\log n$
+\choice $\log^2 n$
+\choice $\log^3 n$
+\end{checkboxes}
 
 
 \end{questions}
