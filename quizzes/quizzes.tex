@@ -792,6 +792,94 @@ $i$ & $s_i$\\
 \choice $\log^3 n$
 \end{checkboxes}
 
+Week 9
+
+% 11 3
+\question Latency is
+\begin{choices}
+\choice The time a client is connected to a broadcast channel
+\choice The time a client listens actively on a broadcast
+channel
+\CorrectChoice The time a client waits for receiving a data item on a broadcast channel 
+\end{choices}
+
+% 12 2
+\question Data Broadcast is beneficial when
+\begin{choices}
+\choice Clients have a high upstream bandwidth
+\CorrectChoice Many clients are interested in the same information
+\choice Clients have many different requests
+\end{choices}
+
+% 20 1
+\question Assume the broadcast channel has one item accessed with frequency 9 and three others accessed with frequency 1. The expected delay for accessing the first item in an optimal broadcast organization will be
+\begin{choices}
+\CorrectChoice 1
+\choice 2
+\choice 3
+\end{choices}
+
+% 21 2
+\question Assume the broadcast channel has one item accessed with frequency 9 and three others accessed with frequency 1. The expected delay for accessing the second type of items will be
+\begin{choices}
+\choice 1
+\CorrectChoice 3
+\choice 6
+\end{choices}
+
+% 34 2
+\question When organizing a broadcast disk a "chunk"
+\begin{choices}
+\choice Contains always all elements of the broadcast disk
+\CorrectChoice Contains sometimes all elements of the broadcast disk
+\choice Contains never all elements of the broadcast disk
+\end{choices}
+
+% 35 1,3
+\question When organizing a broadcast disk which is true~?
+\begin{choices}
+\CorrectChoice The number of copies of different chunks in a broadcast disk is constant
+\choice The number of copies of different data items in a broadcast disk is constant
+\CorrectChoice The number of data items in the chunks of one disk is constant
+\choice The data items in the chunks of one disk are always the same
+\end{choices}
+
+% 48 1,2,3 
+\question Which is true~?
+\begin{choices}
+\CorrectChoice LRU (least recently used) is not optimal because it does not consider the frequency of data items in a data broadcast
+\CorrectChoice MPA (most probable accessed) is not optimal because it does not consider the frequency of data items in a data broadcast
+\CorrectChoice Only PIX considers the frequency of data items in a data broadcast
+\end{choices}
+
+% 49 2
+\question Assume the broadcast and access pattern below. Assuming that $c=\sfrac{1}{2}$ what is the access frequency estimate for B at time 6~?
+\missingfigure{}
+\begin{choices}
+\choice \sfrac{1}{3}
+\CorrectChoice \sfrac{1}{4}
+\choice \sfrac{1}{6}
+\choice \sfrac{1}{12}
+\end{choices}
+\begin{solution}
+$0.5/4 + 0.5 (1/4) = 1/8 + 1/8$
+\end{solution}
+
+% 60 1
+\question The minimal latency of a broadcast channel can be achieved
+\begin{choices}
+\CorrectChoice By not indexing the broadcast
+\choice By indexing the broadcast only once
+\choice By indexing the broadcast according to the (1,m) rule
+\end{choices}
+
+% 61 2
+\question The term "probe wait" refers to
+\begin{choices}
+\choice The time for waiting for a data page
+\CorrectChoice The time for waiting for an index segment
+\choice The time for waiting for a data segment
+\end{choices}
 
 \end{questions}
 \end{multicols*}
