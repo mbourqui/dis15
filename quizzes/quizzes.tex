@@ -1,4 +1,4 @@
-\documentclass[12pt,a4paper,answers]{exam} % Adds 'answers' to print solutions, 'cancelspace' to avoid blank space when solutions provided but 'answers' not set.
+\documentclass[12pt,a4paper]{exam} % Adds 'answers' to print solutions, 'cancelspace' to avoid blank space when solutions provided but 'answers' not set.
 \usepackage[utf8]{inputenc}
 \usepackage{multicol}
 \usepackage[left=1cm,right=1cm,top=1.5cm,bottom=1.8cm]{geometry}
@@ -73,7 +73,7 @@
 \part{Introduction}
 % -------------------------------------------------------------------------------------------------
 \section{An Overview}
-\subsection{Information Systems (week 1)}
+\subsection{Information Systems (Week~1)}
 
 % 13
 \question Functions in models
@@ -225,7 +225,7 @@
 
 
 
-\subsubsection{Primary Horizontal Fragmentation (week 2)} %Week2
+\subsubsection{Primary Horizontal Fragmentation (Week~2)} %Week2
 
 %16
 \question Example: application A1 accesses
@@ -282,7 +282,7 @@ How many horizontal fragments would a minimal and complete fragmentation have?
 
 
 \subsection{Graph Databases} %Week3
-\subsubsection{Semi-structured Data (week 3)}
+\subsubsection{Semi-structured Data (Week~3)}
 
 %14
 \question Semi-structured data
@@ -375,7 +375,7 @@ How many horizontal fragments would a minimal and complete fragmentation have?
 % -------------------------------------------------------------------------------------------------
 \section{Information Retrieval and Data Mining}
 \subsection{Information Retrieval} %Week4
-\subsubsection{Information Retrieval (week 4)}
+\subsubsection{Information Retrieval (Week~4)}
 
 %12
 \question A retrieval model attempts to model
@@ -461,7 +461,7 @@ the term
 
 \subsection{Advanced Retrieval Models} % Week 5
 
-\subsubsection{Latent Semantic Indexing (week 5)}
+\subsubsection{Latent Semantic Indexing (Week~5)}
 
 
 % 13 1
@@ -535,7 +535,7 @@ the term
 \end{checkboxes}
 
 
-\subsubsection{Inverted Files (week 6)}
+\subsubsection{Inverted Files (Week~6)}
 
 % 10 3
 \question A posting indicates
@@ -597,7 +597,7 @@ the term
 
 \section{Peer-2-Peer Search}
 \subsection{Peer-2-Peer Systems}
-\subsubsection{P2P Systems and Resource Location (week 7)}
+\subsubsection{P2P Systems and Resource Location (Week~7)}
 
 % 11 2
 \question Which resource is in Napster not shared in a P2P approach~?
@@ -640,8 +640,8 @@ the term
 \question If the largest city in the world has 16 Mio inhabitants, the second largest 11.3 Mio inhabitants, the third largest 9.2 Mio, the fourth largest 8.0 Mio, and so on, then this is
 \begin{checkboxes}
 \choice A Powerlaw distribution
-\choice A Zipf distribution
-\CorrectChoice None of the two
+\CorrectChoice A Zipf distribution
+\choice None of the two
 \end{checkboxes}
 
 % 32 2
@@ -672,7 +672,7 @@ the term
 %\subsubsection{Hierarchical P2P Overlay Networks}
 % no question
 
-\subsubsection{Hierarchical P2P Overlay Networks (week 8)}
+\subsubsection{Hierarchical P2P Overlay Networks (Week~8)}
 
 % 14 1
 \question The index information in a structured overlay network
@@ -690,9 +690,9 @@ the term
 \end{colfig}
 
 \begin{checkboxes}
-\CorrectChoice Always to peer P5
-\choice Either to peer P5 or P6
-\choice Either to peer P3, P4, P5 or P6
+\CorrectChoice Always to peer $P_5$
+\choice Either to peer $P_5$ or $P_6$
+\choice Either to peer $P_3$, $P_4$, $P_5$ or $P_6$
 \end{checkboxes}
 
 % 22 1
@@ -700,7 +700,7 @@ the term
 \begin{checkboxes}
 \CorrectChoice The next hop is always uniquely determined
 \choice The next hop can be chosen among a constant number of possible candidates
-\choice The next hop can be chosen among log n possible candidates
+\choice The next hop can be chosen among $\log n$ possible candidates
 \end{checkboxes}
 
 % 23 4
@@ -734,26 +734,29 @@ $i$ & $s_i$\\
 \end{checkboxes}
 
 % 31 1
-\question When adding n peers to CAN the number of new zones
+\question When adding $n$ peers to CAN the number of new zones
 \begin{checkboxes}
-\CorrectChoice Is exactly n
+\CorrectChoice Is exactly $n$
 \choice It depends what the keys of the peers were
 \choice It depends on the dimensionality of the key space
 \end{checkboxes}
+\begin{solution}
+One zone per new peer.
+\end{solution}
 
 % 32 3
 \question In CAN, for a fixed dimensionality $d>2$, when moving from 1 to 2 realities
 \begin{checkboxes}
 \choice  The number of entries in the routing table increases by 2
-\choice The number of entries in the routing table increases by d
+\choice The number of entries in the routing table increases by $d$
 \CorrectChoice The number of entries in the routing table doubles
 \end{checkboxes}
 
-% 41
+% 41 2
 \question In FreeNet the routing table is updated
 \begin{checkboxes}
 \choice When a search request message arrives
-\choice When a query answer message arrives
+\CorrectChoice When a query answer message arrives
 \choice When an insert file message arrives
 \end{checkboxes}
 
@@ -769,117 +772,149 @@ $i$ & $s_i$\\
 % 52 2
 \question The local clustering coefficient is the probability that two of my friends are also friends. If I have 10 friends and among them 15 friendships exist, my local clustering coefficient is
 \begin{checkboxes}
-\choice 1/6
-\CorrectChoice 1/3
-\choice 2/3
-\choice 3/2
+\choice $\sfrac{1}{6}$
+\CorrectChoice $\sfrac{1}{3}$
+\choice $\sfrac{2}{3}$
+\choice $\sfrac{3}{2}$
 \end{checkboxes}
+\begin{solution}
+Look at the formula in the slides notes.
+\end{solution}
 
-% 53
+% 53 3
 \question A random graph has
 \begin{checkboxes}
 \choice High clustering and low diameter
 \choice High clustering and high diameter
-\choice Low clustering and low diameter
+\CorrectChoice Low clustering and low diameter
 \choice Low clustering and high diameter
 \end{checkboxes}
 
 % 66 1
-\question In a three-dimensional Kleinberg small world network with log n long range links the search cost is
+\question In a three-dimensional Kleinberg small world network with $\log n$ long range links the search cost is
 \begin{checkboxes}
 \CorrectChoice $\log n$
 \choice $\log^2 n$
 \choice $\log^3 n$
 \end{checkboxes}
 
-Week 9
+\subsubsection{Data Broadcasting in Mobile Networks (Week~9)}
 
 % 11 3
 \question Latency is
-\begin{choices}
+\begin{checkboxes}
 \choice The time a client is connected to a broadcast channel
-\choice The time a client listens actively on a broadcast
-channel
+\choice The time a client listens actively on a broadcast channel
 \CorrectChoice The time a client waits for receiving a data item on a broadcast channel 
-\end{choices}
+\end{checkboxes}
 
 % 12 2
 \question Data Broadcast is beneficial when
-\begin{choices}
+\begin{checkboxes}
 \choice Clients have a high upstream bandwidth
 \CorrectChoice Many clients are interested in the same information
 \choice Clients have many different requests
-\end{choices}
+\end{checkboxes}
 
 % 20 1
 \question Assume the broadcast channel has one item accessed with frequency 9 and three others accessed with frequency 1. The expected delay for accessing the first item in an optimal broadcast organization will be
-\begin{choices}
+\begin{checkboxes}
 \CorrectChoice 1
 \choice 2
 \choice 3
-\end{choices}
+\end{checkboxes}
 
 % 21 2
 \question Assume the broadcast channel has one item accessed with frequency 9 and three others accessed with frequency 1. The expected delay for accessing the second type of items will be
-\begin{choices}
+\begin{checkboxes}
 \choice 1
 \CorrectChoice 3
 \choice 6
-\end{choices}
+\end{checkboxes}
 
 % 34 2
 \question When organizing a broadcast disk a "chunk"
-\begin{choices}
+\begin{checkboxes}
 \choice Contains always all elements of the broadcast disk
 \CorrectChoice Contains sometimes all elements of the broadcast disk
 \choice Contains never all elements of the broadcast disk
-\end{choices}
+\end{checkboxes}
 
 % 35 1,3
-\question When organizing a broadcast disk which is true~?
-\begin{choices}
+\question When organizing a broadcast disk, which is true~?
+\begin{checkboxes}
 \CorrectChoice The number of copies of different chunks in a broadcast disk is constant
 \choice The number of copies of different data items in a broadcast disk is constant
 \CorrectChoice The number of data items in the chunks of one disk is constant
 \choice The data items in the chunks of one disk are always the same
-\end{choices}
+\end{checkboxes}
 
 % 48 1,2,3 
 \question Which is true~?
-\begin{choices}
+\begin{checkboxes}
 \CorrectChoice LRU (least recently used) is not optimal because it does not consider the frequency of data items in a data broadcast
 \CorrectChoice MPA (most probable accessed) is not optimal because it does not consider the frequency of data items in a data broadcast
 \CorrectChoice Only PIX considers the frequency of data items in a data broadcast
-\end{choices}
+\end{checkboxes}
 
 % 49 2
 \question Assume the broadcast and access pattern below. Assuming that $c=\sfrac{1}{2}$ what is the access frequency estimate for B at time 6~?
-\missingfigure{}
-\begin{choices}
+\begin{colfig}
+\centering
+\includegraphics[scale=0.75]{w9_s49}
+\end{colfig}
+\begin{checkboxes}
 \choice \sfrac{1}{3}
 \CorrectChoice \sfrac{1}{4}
 \choice \sfrac{1}{6}
 \choice \sfrac{1}{12}
-\end{choices}
+\end{checkboxes}
 \begin{solution}
-$0.5/4 + 0.5 (1/4) = 1/8 + 1/8$
+
+At $t_2$, B has value $\frac{\sfrac{1}{2}}{2-0}+0 = \frac{1}{4}$.\\
+At $t_6$, B has value $\frac{\sfrac{1}{2}}{6-2}+\frac{1}{2}\cdot\frac{1}{4} = \frac{1}{4}$
 \end{solution}
 
 % 60 1
 \question The minimal latency of a broadcast channel can be achieved
-\begin{choices}
+\begin{checkboxes}
 \CorrectChoice By not indexing the broadcast
 \choice By indexing the broadcast only once
 \choice By indexing the broadcast according to the (1,m) rule
-\end{choices}
+\end{checkboxes}
 
 % 61 2
 \question The term "probe wait" refers to
-\begin{choices}
+\begin{checkboxes}
 \choice The time for waiting for a data page
 \CorrectChoice The time for waiting for an index segment
 \choice The time for waiting for a data segment
-\end{choices}
+\end{checkboxes}
+
+Week 10
+% 15 2
+\question Based on the analysis of search terms and subsequent link clicks, a search engine provider places ads on  search results that are most likely to be clicked by the users.
+This task is an example of~:
+\begin{checkboxes}
+\choice Local rule discovery
+\end{checkboxes}
+
+% 22 4
+\question Let's assume that the transactions are stored in [...]
+
+% 28 3
+
+% 29 4
+
+% 42 3
+
+% 43 2
+\begin{solution}
+{1,2,3},{1,2,4}->{1,2,3,4}
+{1,2,5} -> {1,2,3,5},{1,2,4,5}
+\end{solution}
+
+% 46 1
 
 \end{questions}
 \end{multicols*}
