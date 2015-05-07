@@ -899,26 +899,111 @@ At $t_6$, B has value $\frac{\sfrac{1}{2}}{6-2}+\frac{1}{2}\cdot\frac{1}{4} = \f
 This task is an example of~:
 \begin{checkboxes}
 \choice Local rule discovery
+\CorrectChoice Predictive modelling
+\choice Descriptive modelling
+\choice Exploratory data analysis
 \end{checkboxes}
 
 \subsection{Pattern structure}
 % 22 4
-\question Let's assume that the transactions are stored in [...]
+\question Let’s assume that the transactions are stored in a relation $T(x, A1, \ldots, A5)$, where $x$ is the customer and each attribute $A1, \ldots, A5$ can have 3 different values. How many different items exist after reduction to a single dimension~?
+\begin{checkboxes}
+\choice 5
+\choice 243
+\choice 125
+\CorrectChoice 15
+\end{checkboxes}
 
 \subsection{Scoring function}
 % 28 3
+\question 10 itemsets out of 100 contain item A, of which 5 also contain B. The rule A$\rightarrow$ B has~:
+\begin{checkboxes}
+\choice 5\% support and 10\% confidence
+\choice 10\% support and 50\% confidence
+\CorrectChoice 5\% support and 50\% confidence
+\choice 10\% support and 10\% confidence
+\end{checkboxes}
 
 % 29 4
+\question 10 itemsets out of 100 contain item A, of which 5 also contain B. The rule B$\rightarrow$A has~:
+\begin{checkboxes}
+\choice unknown support and 50\% confidence
+\choice unknown support and unknown confidence
+\choice 5\% support and 50\% confidence
+\CorrectChoice 5\% support and unknown confidence
+\end{checkboxes}
 
 % 42 3
+\question Given the frequent 2-itemsets \{1,2\}, \{1,4\}, \{2,3\} and \{3,4\}, how many 3-itemsets are generated and how many are pruned~?
+\begin{checkboxes}
+\choice 2, 2
+\choice 1, 0
+\CorrectChoice 1, 1
+\choice 2, 1
+\end{checkboxes}
 
 % 43 2
+\question After the join step, the number of $k+1$-itemsets \ldots
+\begin{checkboxes}
+\choice is equal to the number of frequent $k$-itemsets
+\CorrectChoice can be equal, lower or higher than the number of frequent $k$-itemsets
+\choice is always higher than the number of frequent $k$-itemsets
+\choice is always lower than the number of frequent $k$-itemsets
+\end{checkboxes}
 \begin{solution}
-{1,2,3},{1,2,4}->{1,2,3,4}
-{1,2,5} -> {1,2,3,5},{1,2,4,5}
+\{1,2,3\}, \{1,2,4\} $\rightarrow$ \{1,2,3,4\}
+\{1,2,5\} $\rightarrow$ \{1,2,3,5\},\{1,2,4,5\}
 \end{solution}
 
 % 46 1
+\question If rule \{A,B\}$\rightarrow$\{C\} has confidence c 1 and rule \{A\}$\rightarrow$\{C\} has confidence c 2 , then \ldots
+\begin{checkboxes}
+\CorrectChoice $c_2 \geq c_1$
+\choice $c_1 > c_2$ and $c_2 > c_1$ are both possible
+\choice $c_1 \geq c_2$
+\end{checkboxes}
+
+
+\subsection{Clustering \& Classification (Week 11)}
+\subsection{Clustering}
+% 14 4
+\question Suppose we have a dataset of pictures and we want to cluster them. Which partitioning algorithm seems more appropriate?
+\missingfigure{faces}
+\begin{checkboxes}
+\choice k-medoids
+\choice k-medians
+\choice k-means
+\choice none of the above
+\end{checboxes}
+
+\subsubsection{Classification}
+% 
+\question What will be the color of the middle points after convergence?
+\missingfigure{grid}
+\begin{checkboxes}
+\choice Green
+\choice Yellow
+\choice Blue
+\choice k-means does not converge
+\end{checkboxes}
+
+%
+\question If a classifier has 75\% accuracy, it means that \ldots
+\begin{checkboxes}
+\choice correctly classifies 75\% of the data items in the training set
+\choice It correctly classifies 100\% of the data items in the training set but only 75\% in the test set
+\choice It correctly classifies 75\% of the data items in the test set
+\choice It correctly classifies 75\% of the unknown data items
+\end{checkboxes}
+
+%
+\question Given the distribution of positive and negative samples for attributes $A_1$ and $A_2$, which is the best attribute for splitting~?
+\begin{checkboxes}
+\choice $A_1$
+\choice $A_2$
+\choice They are the same
+\choice There is not enough information to answer the question
+\end{checkboxes}
 
 \end{questions}
 \end{multicols*}
