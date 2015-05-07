@@ -974,7 +974,7 @@ This task is an example of~:
 \choice k-medians
 \choice k-means
 \choice none of the above
-\end{checboxes}
+\end{checkboxes}
 
 \subsubsection{Classification}
 % 
@@ -987,23 +987,31 @@ This task is an example of~:
 \choice k-means does not converge
 \end{checkboxes}
 
-%
+% 27 3
 \question If a classifier has 75\% accuracy, it means that \ldots
 \begin{checkboxes}
 \choice correctly classifies 75\% of the data items in the training set
 \choice It correctly classifies 100\% of the data items in the training set but only 75\% in the test set
-\choice It correctly classifies 75\% of the data items in the test set
+\CorrectChoice It correctly classifies 75\% of the data items in the test set
 \choice It correctly classifies 75\% of the unknown data items
 \end{checkboxes}
+\begin{solution}
+A model that fits 100\% of the training data might be too complex and give poor results on the test set.
+\end{solution}
 
-%
+% 38 1
 \question Given the distribution of positive and negative samples for attributes $A_1$ and $A_2$, which is the best attribute for splitting~?
+\missingfigure{table}
 \begin{checkboxes}
 \choice $A_1$
 \choice $A_2$
 \choice They are the same
 \choice There is not enough information to answer the question
 \end{checkboxes}
+\begin{solution}
+Entropy of $A_1$ =  
+Entropy of $A_2$ = 0.8 * 0.5 + 0.8 * 0.5
+\end{solution}
 
 \end{questions}
 \end{multicols*}
