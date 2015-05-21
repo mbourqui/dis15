@@ -1,4 +1,4 @@
-\documentclass[12pt,a4paper]{exam} % Adds 'answers' to print solutions, 'cancelspace' to avoid blank space when solutions provided but 'answers' not set.
+\documentclass[12pt,a4paper,answers]{exam} % Adds 'answers' to print solutions, 'cancelspace' to avoid blank space when solutions provided but 'answers' not set.
 \usepackage[utf8]{inputenc}
 \usepackage{multicol}
 \usepackage[left=1cm,right=1cm,top=1.5cm,bottom=1.8cm]{geometry}
@@ -959,7 +959,7 @@ This task is an example of~:
 \end{solution}
 
 % 46 1
-\question If rule \{A,B\}$\rightarrow$\{C\} has confidence c 1 and rule \{A\}$\rightarrow$\{C\} has confidence c 2 , then \ldots
+\question If rule \{A,B\}$\rightarrow$\{C\} has confidence $c_1$ and rule \{A\}$\rightarrow$\{C\} has confidence $c_2$ , then \ldots
 \begin{checkboxes}
 \CorrectChoice $c_2 \geq c_1$
 \choice $c_1 > c_2$ and $c_2 > c_1$ are both possible
@@ -971,7 +971,9 @@ This task is an example of~:
 \subsection{Clustering}
 % 14 4
 \question Suppose we have a dataset of pictures and we want to cluster them. Which partitioning algorithm seems more appropriate?
-\missingfigure{faces}
+\begin{colfig}
+\includegraphics[scale=0.3]{w11_s13}
+\end{colfig}
 \begin{checkboxes}
 \choice k-medoids
 \choice k-medians
@@ -982,7 +984,9 @@ This task is an example of~:
 \subsubsection{Classification}
 % 
 \question What will be the color of the middle points after convergence?
-\missingfigure{grid}
+\begin{colfig}
+\includegraphics[scale=0.3]{w11_s20}
+\end{colfig}
 \begin{checkboxes}
 \choice Green
 \choice Yellow
