@@ -9,6 +9,7 @@
 \usepackage{xfrac}
 \usepackage{hyperref}
 \usepackage{subfig}
+\usepackage{tabu}
 
 % Style
 \input{style.tex}
@@ -177,20 +178,20 @@
 \end{checkboxes}
 
 % 80
-\question An ontology is a
+\question An \emph{ontology} is a
 \begin{checkboxes}
-\choice Sdatabase
-\choice database schema
-\choice data model
-\choice data modeling formalism
-\choice model
+\choice Database
+\choice Database schema
+\choice Data model
+\choice Data modeling formalism
+\CorrectChoice Model
 \end{checkboxes}
 
 
 \subsection{Autonomy}
 
 % 89
-\question Trust is
+\question \emph{Trust} is
 \begin{checkboxes}
 \choice A quality of information
 \choice A quality of a user
@@ -229,12 +230,14 @@
 
 %16
 \question Example: application A1 accesses
+\begin{colfig}
+\includegraphics[scale=0.5]{w2_s16}
+\end{colfig}
 \begin{enumerate}
 \item Fragment F1: with frequency 3
 \item Fragment F2: with frequency 1
 \end{enumerate}
 A1 accesses the whole relation with frequency
-\missingfigure{graph}
 \begin{checkboxes}
 \CorrectChoice $\sfrac{13}{7}$
 \choice $\sfrac{4}{7}$
@@ -242,9 +245,19 @@ A1 accesses the whole relation with frequency
 \end{checkboxes}
 
 %26
-\question Consider the access frequencies below:
-How many horizontal fragments would a minimal and complete fragmentation have?
-\missingfigure{table}
+\question Consider the access frequencies below: 
+\begin{coltab}
+\begin{tabu}{X[cm]|*{4}{X[cm]}}
+$<$af1,af2$>$ & \texttt{Location = "Paris"} & \texttt{Location = "Geneva"}  & \texttt{Location = "Munich"} & \texttt{Location = "Bangalore"} \\
+\hline
+\hline
+\texttt{Budget > 200000} & $<3,1>$ & $<3,1>$ & $<1,3>$ & n/a \\
+\texttt{Budget <= 200000} & $<1,1>$ & $<1,1>$ & n/a & $<1,3>$ \\
+\hline
+\end{tabu}
+\end{coltab}
+\begin{parts}
+\part How many horizontal fragments would a minimal and complete fragmentation have?
 \begin{checkboxes}
 \CorrectChoice 3
 \choice 4
@@ -252,14 +265,15 @@ How many horizontal fragments would a minimal and complete fragmentation have?
 \end{checkboxes}
 
 %27
-\question Which of the following sets of simple predicates is complete?
-\missingfigure{table}
+\part Which of the following sets of simple predicates is complete?
+%\missingfigure{table} %Same as above
 \begin{checkboxes}
 \choice {Location = ”Munich", Budget \textgreater\ 200000 }
 \choice {Location = ”Munich", Location = ”Bangalore”}
 \choice {Location = ”Paris", Budget $\le$ 200000 }
 \CorrectChoice None of those
 \end{checkboxes}
+\end{parts}
 
 %33
 \question Which is true for MinFrag algorithm?
@@ -706,7 +720,7 @@ the term
 % 23 4
 \question When adding $q$ to the Chord ring~: in the routing table of $p$
 \begin{colfig}
-\begin{minipage}[b]{0.45\linewidth}
+\begin{minipage}[c]{0.45\linewidth}
 \centering
 \begin{tabular}{c|c}
 \hline
@@ -721,7 +735,7 @@ $i$ & $s_i$\\
 \hline
 \end{tabular}
 \end{minipage}
-\begin{minipage}[b]{0.45\linewidth}
+\begin{minipage}[c]{0.45\linewidth}
 \centering
 \includegraphics[width=\textwidth]{w8_s23}
 \end{minipage}
@@ -954,17 +968,29 @@ This task is an example of~:
 \choice is always lower than the number of frequent $k$-itemsets
 \end{checkboxes}
 \begin{solution}
-\{1,2,3\}, \{1,2,4\} $\rightarrow$ \{1,2,3,4\}
+\{1,2,3\}, \{1,2,4\} $\rightarrow$ \{1,2,3,4\}\\
 \{1,2,5\} $\rightarrow$ \{1,2,3,5\},\{1,2,4,5\}
 \end{solution}
 
 % 46 1
 \question If rule \{A,B\}$\rightarrow$\{C\} has confidence $c_1$ and rule \{A\}$\rightarrow$\{C\} has confidence $c_2$ , then \ldots
 \begin{checkboxes}
-\CorrectChoice $c_2 \geq c_1$
-\choice $c_1 > c_2$ and $c_2 > c_1$ are both possible
+\choice $c_2 \geq c_1$
+\CorrectChoice $c_1 > c_2$ and $c_2 > c_1$ are both possible
 \choice $c_1 \geq c_2$
 \end{checkboxes}
+\begin{solution}
+Typo in the slides, meant \{A\}$\rightarrow$\{B,C\}
+% Ex fromn Roger Vion
+%1. transactions : {A}, {A, B}, {A, B, C}
+%=> c1 = 1/2 > c2 = 1/3
+%
+%2. transactions : {A}, {A, B}, {A, C}, {A, B, C}
+%=> c1 = 1/2 = c2
+%
+%3. transactions : {A, B}, {A, C}, {A, B, C}
+%=> c1 = 1/2 < c2 = 2/3
+\end{solution}
 
 
 \subsection{Clustering \& Classification (Week 11)}
@@ -1008,7 +1034,26 @@ A model that fits 100\% of the training data might be too complex and give poor 
 
 % 38 1
 \question Given the distribution of positive and negative samples for attributes $A_1$ and $A_2$, which is the best attribute for splitting~?
-\missingfigure{table}
+\begin{coltab}
+\centering
+\begin{tabular}{l c c}
+\hline
+$A_1$ & P & N\\
+\hline
+\hline
+a & 2 & 2\\
+b & 4 & 0\\
+\hline
+\\
+\hline
+$A_2$ & P & N\\
+\hline
+\hline
+x & 3 & 1\\
+y & 3 & 1\\
+\hline
+\end{tabular}
+\end{coltab}
 \begin{checkboxes}
 \CorrectChoice $A_1$
 \choice $A_2$
